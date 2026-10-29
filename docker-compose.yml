@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8811:8000"  # host:container — change the host side if 8811 is taken
+    volumes:
+      - backend_cache:/app/.cache
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend_cache:

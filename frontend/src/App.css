@@ -1,0 +1,158 @@
+:root {
+  --grid-color: #e2e8f0;
+  --border-color: #e2e8f0;
+  --bg: #f8fafc;
+  --panel-bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grid-color: #334155;
+    --border-color: #334155;
+    --bg: #0b1220;
+    --panel-bg: #111827;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.panel h2 {
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+
+.day-picker label {
+  margin-right: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.day-picker select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--panel-bg);
+  color: var(--text);
+}
+
+.decision-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.chart-caption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 12px 0 8px;
+}
+
+.metrics-panel h3 {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 16px 0 10px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.metric-tile {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.metric-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.metric-unit {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.metrics-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+.error-banner {
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+footer {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 16px;
+}
