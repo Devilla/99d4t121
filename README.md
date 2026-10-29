@@ -11,7 +11,7 @@ the team needs when buying power from the day-ahead market to cover demand the w
 Scope, by design: national-level wind only, January 2026 only, two Elexon BMRS datasets
 (`FUELHH` actuals, `WINDFOR` forecasts). See [Decision rule](#decision-rule) for the modeling choices.
 
-**Live app:** _TODO — add the Vercel URL once deployed_
+**Live app:** https://elexon-wind-forecast.vercel.app
 **Video demo:** _TODO — add the unlisted YouTube link_
 
 ## AI tool disclosure

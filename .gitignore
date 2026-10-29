@@ -17,3 +17,5 @@ frontend/dist/
 
 # Logs
 *.log
+.vercel
+.env*
